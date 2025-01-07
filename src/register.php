@@ -7,7 +7,18 @@ if(!isset($_SESSION)){
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST["username"];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+    $password2 = $_POST["password-check"];
+    $password = $_POST["password"];
+    if ($password !== $password2) {
+        //echo "Passwords do not match.";
+        //sleep(3);
+        //header('Location: ./views/register_page.php');
+        //echo "<script type='text/javascript'>document.location.href='./views/register_page.php';</script>";
+        header("refresh: 2; ./views/register_page.php");
+        echo "Passwords do not match. Redirecting in 2...";
+        exit;
+    }
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
     $stmt = $pdo->prepare($sql);

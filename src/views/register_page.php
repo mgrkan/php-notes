@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="password-check">Password Again</label>
-            <input type="password" class="form-control" id="password-check" placeholder="Password">
+            <input type="password" class="form-control" name="password-check" id="password-check" placeholder="Password">
             <a href="./login_page.php">Log in if you already have an account</a>
         </div>
         <button type="submit" class="btn btn-primary mt-2">Submit</button>
