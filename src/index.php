@@ -31,9 +31,10 @@ $notes = $stmt->fetchAll();
                         <h5 class="card-title"><?= htmlspecialchars($note['title']) ?></h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary"><?= htmlspecialchars($note['created_at']) ?></h6>
                         <p class="card-text"><?= htmlspecialchars($note['content']) ?></p>
-                        <form action="./edit.php" method="POST">
+                        <form action="./views/edit_page.php" method="POST">
                             <input type="hidden" name="title" value="<?= htmlspecialchars($note['title']) ?>">
                             <input type="hidden" name="content" value="<?= htmlspecialchars($note['content']) ?>">
+                            <input type="hidden" name="id" value="<?= htmlspecialchars($note['id']) ?>">
                             <button type="submit" class="btn btn-primary mt-2">Edit</button>
                         </form>
                         <form action="./delete.php" method="POST">
