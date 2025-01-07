@@ -1,6 +1,7 @@
 <?php
-
-
+if(!isset($_SESSION)){ 
+    session_start(); 
+}
 
 function isLoggedIn() {
     return isset($_SESSION['user_id']);
@@ -8,7 +9,7 @@ function isLoggedIn() {
 
 function redirectIfNotLoggedIn() {
     if (!isLoggedIn()) {
-        header('Location: login.php');
+        header('Location: ./views/login_page.php');
         exit();
     }
 }
