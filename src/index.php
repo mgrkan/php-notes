@@ -35,11 +35,11 @@ $notes = $stmt->fetchAll();
                             <input type="hidden" name="title" value="<?= htmlspecialchars($note['title']) ?>">
                             <input type="hidden" name="content" value="<?= htmlspecialchars($note['content']) ?>">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($note['id']) ?>">
-                            <button type="submit" class="btn btn-primary mt-2">Edit</button>
+                            <button type="submit" class="btn btn-primary mt-2">Düzenle</button>
                         </form>
                         <form action="./delete.php" method="POST">
                             <input type="hidden" name="id" value="<?= htmlspecialchars($note['id']) ?>">
-                            <button type="submit" class="btn btn-primary mt-2">delete</button>
+                            <button type="submit" class="btn btn-primary mt-2">Sil</button>
                         </form>
                     </div>
                     </div>

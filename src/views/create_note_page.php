@@ -13,14 +13,14 @@
         <div class="container" style="margin-top: 20px; align-items: center; justify-content: center;">
             <form action="../create_note.php" method="POST">
                 <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                <label for="title" class="form-label">Başlık</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Başlık">
                 </div>
                 <div class="mb-3">
-                <label for="content" class="form-label">Content</label>
+                <label for="content" class="form-label">İçerik</label>
                 <textarea class="form-control" id="content" name="content" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <button type="submit" class="btn btn-primary mt-2">Gönder</button>
             </form>
         </div>
     </body>

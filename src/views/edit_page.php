@@ -15,7 +15,7 @@ include "./header.php" ?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Note</title>
+    <title>Not Oluştur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
     <body>
@@ -24,15 +24,15 @@ include "./header.php" ?>
         <div class="container" style="margin-top: 20px; align-items: center; justify-content: center;">
             <form action="../edit.php" method="POST">
                 <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?= $title ?>">
+                <label for="title" class="form-label">Başlık</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Başlık" value="<?= $title ?>">
                 </div>
                 <div class="mb-3">
-                <label for="content" class="form-label">Content</label>
+                <label for="content" class="form-label">İçerik</label>
                 <textarea class="form-control" id="content" name="content" rows="3"><?= $content  ?></textarea>
                 <input type="hidden" name="id" value="<?= $id ?>">
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <button type="submit" class="btn btn-primary mt-2">Gönder</button>
             </form>
         </div>
     </body>
